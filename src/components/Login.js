@@ -45,7 +45,7 @@ const Login = () => {
     //         toast.error("Invalid Credentials", {theme: "colored", autoClose: 3000});
     //     }
     //   );
-    if (uname === "sree" && pword === "kanth") {
+    if (uname === "sreekanth" && pword === "sreekanth123") {
       setIsLoggedIn(true);
       navigate("/home");
     } else {
@@ -78,14 +78,14 @@ const Login = () => {
         <form onSubmit={handleSubmit}>
           <div className={loginStyles.formGroup}>
             <label htmlFor="uname">Username</label>
-            <input type="text" name="uname" ref={unameRef} />
+            <input type="text" name="uname" placeholder="sreekanth" ref={unameRef} />
             {unameErr.length > 0 ? (
               <span className={loginStyles.error}>{unameErr}</span>
             ) : null}
           </div>
           <div className={loginStyles.formGroup}>
             <label htmlFor="pword">Password</label>
-            <input type="password" name="pword" ref={pwordRef} />
+            <input type="password" name="pword" placeholder="sreekanth123" ref={pwordRef} />
             {pwordErr.length > 0 ? (
               <span className={loginStyles.error}>{pwordErr}</span>
             ) : null}
